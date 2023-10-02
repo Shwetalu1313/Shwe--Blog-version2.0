@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+.profile, .blog{
+    width: 100%;
+    height: 80vh;
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 5px, transparent 5px) 0% 0%/10px 10px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 5px, transparent 5px) 100% 0%/10px 10px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 5px, transparent 5px) 0% 100%/10px 10px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 5px, transparent 5px) 100% 100%/10px 10px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 20px) no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 20px) calc(100% - 10px) no-repeat,
+    linear-gradient(#556f75 0%, #1fb8da 100%);
+    padding: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+nav .dropdown-menu a:hover{
+    background: linear-gradient(176deg, rgba(13,33,123,0.14002097420999648) 23%, rgba(75,184,238,0.04198175852372199) 97%);
+}
+
+.profile{
+    overflow-y: hidden;
+    position: relative;
+}
+
+.profile #profile_img{
+    width: 200px;
+    height: 200px;
+    margin: 1rem auto;
+    border: 5px solid #769EA7;
+    z-index: 1;
+    position: relative;
+}
+
+.profile a {
+    text-decoration: none;
+    position: absolute;
+    left: 50%; /* Set the left position to 50% */
+    transform: translateX(-50%); /* Horizontally center the form */
+    top: 12rem;
+    z-index: 2;
+}
+
+form.hide-submit input[type="submit"] { display: none;}
+
+.profile svg{
+    cursor: pointer;
+}
+.profile svg:hover path{
+    fill: #fefefe;   
+}
+
+.profile-body{
+    transform: translateY(-5rem);
+    padding-top: 5rem;
+    min-height: 27.2rem;
+    border-radius: 60px 60px 10px 10px;
+    background: linear-gradient(179deg, #D9D9D9 0.48%, #92FCFC 154.03%);
+    z-index: 0;
+    position: relative;
+}
+
+.profile h5{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    margin: auto auto;
+    font-style: normal;
+    font-weight: 350;
+    line-height: normal;
+}
+
+.profile p{
+    color: #1B363C;
+    text-align: center;
+    font-family: Inter;
+    margin: auto auto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: normal;
+}
+
+.profile hr{
+    width: 150px;
+    height: 3px;
+    margin: auto auto;
+}
+
+
+
+/* blog */
+.blog .dropdown-center button{
+    background-color: rgba(70, 205, 235, 1);
+}
+
+.blog-body{
+    width: 100%;
+    height: 90%;
+
+}
+
+
+/* Ensure that .blog and its parent have a defined height (e.g., using flex or grid) */
+.blog {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog .container {
+    flex-grow: 1;
+    max-height: 88%; 
+    overflow-y: auto; 
+}
+
+.blog .container::-webkit-scrollbar {
+    display: none;
+  }
+
+
+/* media query for tablet */
+@media only screen and (max-width: 600px){
+    .profile form {
+        top: 25%;
+    }
+    
+}
